@@ -40,7 +40,7 @@
       <div class="video-container">
         <div class="video-section-left">
           <div class="video-content">
-            <video src="#"></video>
+            <video autoplay="autoplay" src="https://q1.youked.jiker.com/course/1056/video-release/xl445-ke1056-ks3356-release-540p-20180816-5regb4Ke9gBLi70pJ31AMY2YiT1lsgLbH69UXjLc.mp4?e=1623229222&token=7hbzf7Ut85UjN15uEc7f29qk1GfznmV8t-cYZHwn:yXkSfGK_jmv24Bn823l2DCBX4TI=" width="100%" data-v="data-video"></video>
             <div class="video-icon">
               <img src="./images/qualcomm/play.png">
             </div>
@@ -75,24 +75,24 @@
               <img class="chapter-icon" src="./images/qualcomm/arrow-left.png">
             </div>
             <div class="video-chapter-bar">
-              <ul class="video-chapter-list">
+              <ul id="video-chapter-list">
                 <li class="video-chapter-item" data-nav="chapter-one">
-                  <a class="chapter-item-link" href="javascript:void(0)">第一节</a>
+                  <a class="chapter-item-link">第一节</a>
                 </li>
                 <li class="video-chapter-item" data-nav="chapter-two">
-                  <a class="chapter-item-link" href="javascript:void(0)">第二节</a>
+                  <a class="chapter-item-link">第二节</a>
                 </li>
                 <li class="video-chapter-item" data-nav="chapter-three">
-                  <a class="chapter-item-link" href="javascript:void(0)">第三节</a>
+                  <a class="chapter-item-link">第三节</a>
                 </li>
                 <li class="video-chapter-item" data-nav="chapter-four">
-                  <a class="chapter-item-link" href="javascript:void(0)">第四节</a>
+                  <a class="chapter-item-link">第四节</a>
                 </li>
                 <li class="video-chapter-item" data-nav="chapter-five">
-                  <a class="chapter-item-link" href="javascript:void(0)">第五节</a>
+                  <a class="chapter-item-link">第五节</a>
                 </li>
                 <li class="video-chapter-item" data-nav="chapter-six">
-                  <a class="chapter-item-link" href="javascript:void(0)">第六节</a>
+                  <a class="chapter-item-link">第六节</a>
                 </li>
               </ul>
             </div>
@@ -101,8 +101,9 @@
             </div>
           </div>
           <div class="video-catalog">
-            <ul class="video-catalog-list">
-              <li class="video-catalog-item">
+            <ul class="video-catalog-list" id="video-catalog-list">
+              <li class="video-catalog-item" id="chapter-one">
+                <img class="toggle-arrow active" data-index="0" src="./images/qualcomm/toggle-arrow.png">
                 <p class="catalog-item-title">第一节 课程介绍</p>
                 <a class="catalog-item-link" href="javascript:void(0)">
                   <div class="catalog-item-content">
@@ -114,7 +115,8 @@
                   </div>
                 </a>
               </li>
-              <li class="video-catalog-item">
+              <li class="video-catalog-item" id="chapter-two">
+                <img class="toggle-arrow" data-index="0" src="./images/qualcomm/toggle-arrow.png">
                 <p class="catalog-item-title">第二节 异步化架构设计</p>
                 <a class="catalog-item-link" href="javascript:void(0)">
                   <div class="catalog-item-content">

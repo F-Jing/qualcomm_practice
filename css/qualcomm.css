@@ -24,13 +24,16 @@
   top: 85px;
   left: 130px;
 }
-.nav-fixed{
+
+.nav-fixed {
   height: 57px;
 }
+
 .nav-section {
   height: 57px;
   background: rgba(37, 34, 34, 1);
 }
+
 .nav-section.nav-fixed {
   position: fixed;
   top: 0;
@@ -89,6 +92,8 @@
 .video-content {
   height: 520px;
   position: relative;
+  /* 去除视频播放时边框 */
+  /* overflow: hidden; */
 }
 
 .video-icon {
@@ -234,11 +239,13 @@
   width: 315px;
   border-bottom: 1px solid #EAEAEA;
 }
-.video-chapter-bar{
+
+.video-chapter-bar {
   flex-grow: 1;
   overflow-x: hidden;
 }
-.video-chapter-list {
+
+#video-chapter-list {
   width: 408px;
   display: flex;
   justify-content: space-around;
@@ -250,7 +257,15 @@
   position: relative;
 }
 
+.chapter-item-link.active {
+  font-size: 16px;
+  font-weight: 600;
+  color: rgba(51, 51, 51, 1);
+}
+
 .chapter-item-link {
+  width: 42px;
+  height: 19px;
   font-size: 14px;
   font-family: PingFangSC-Regular, PingFang SC;
   font-weight: 400;
@@ -259,6 +274,8 @@
 }
 
 .chapter-item-link:hover {
+  width: 42px;
+  height: 19px;
   font-size: 16px;
   font-weight: 600;
   color: rgba(51, 51, 51, 1);
@@ -281,20 +298,38 @@
 
 .chapter-item-icon-right {
   padding-right: 14px;
+  cursor: pointer;
 }
-.chapter-item-icon-left{
+
+.chapter-item-icon-left {
   padding-left: 14px;
+  cursor: pointer;
 }
+
 .chapter-icon {
   width: 8px;
 }
 
 
 .video-catalog-list {
+  position: relative;
   padding-top: 12px;
   height: 362px;
   overflow-y: scroll;
   overflow-x: hidden;
+}
+
+.toggle-arrow {
+  float: left;
+  padding: 16px 10px;
+  cursor: pointer;
+}
+
+.toggle-arrow.active {
+  float: left;
+  padding: 16px 10px;
+  cursor: pointer;
+  transform: rotate(-90deg);
 }
 
 .video-catalog-list::-webkit-scrollbar {
@@ -334,6 +369,18 @@
 
 
 .catalog-item-content:hover .catalog-info {
+  margin-top: 15px;
+  transition: all 0.1s ease-in;
+}
+
+.catalog-item-content.active {
+  width: 304px;
+  height: 51px;
+  background: rgba(51, 51, 51, .1);
+  border-radius: 8px;
+  transition: all 0.2s ease-in;
+}
+.catalog-info.active{
   margin-top: 15px;
   transition: all 0.1s ease-in;
 }
@@ -410,7 +457,7 @@
 .teacher-item {
   width: 240px;
   height: 405px;
-  flex:none;
+  flex: none;
   background: rgba(255, 255, 255, 1);
   text-align: center;
   margin-right: 93px;
