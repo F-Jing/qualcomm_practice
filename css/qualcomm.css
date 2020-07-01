@@ -241,7 +241,7 @@
 }
 
 .video-chapter-bar {
-  flex-grow: 1;
+  /* flex-grow: 1; */
   overflow-x: hidden;
 }
 
@@ -255,17 +255,6 @@
 .video-chapter-item {
   cursor: pointer;
   position: relative;
-}
-
-.chapter-item-link.active {
-  font-size: 16px;
-  font-weight: 600;
-  color: rgba(51, 51, 51, 1);
-}
-
-.chapter-item-link {
-  width: 42px;
-  height: 19px;
   font-size: 14px;
   font-family: PingFangSC-Regular, PingFang SC;
   font-weight: 400;
@@ -273,15 +262,20 @@
   line-height: 40px;
 }
 
-.chapter-item-link:hover {
-  width: 42px;
-  height: 19px;
+.video-chapter-item.active {
   font-size: 16px;
   font-weight: 600;
   color: rgba(51, 51, 51, 1);
 }
 
-.chapter-item-link::after {
+.video-chapter-item:hover {
+  font-size: 16px;
+  font-weight: 600;
+  color: rgba(51, 51, 51, 1);
+
+}
+
+.video-chapter-item::after {
   content: "";
   display: none;
   background: rgba(15, 199, 0, 1);
@@ -289,7 +283,7 @@
   height: 3px;
 }
 
-.video-chapter-item:hover .chapter-item-link::after {
+.video-chapter-item:hover::after {
   display: block;
   position: absolute;
   bottom: 0px;
@@ -357,48 +351,37 @@
   align-items: baseline;
   width: 304px;
   margin: 0 auto;
+  padding: 11.5px 0;
 }
 
 .catalog-item-content:hover {
-  width: 304px;
-  height: 51px;
   background: rgba(51, 51, 51, .1);
   border-radius: 8px;
   transition: all 0.2s ease-in;
-}
-
-
-.catalog-item-content:hover .catalog-info {
-  margin-top: 15px;
-  transition: all 0.1s ease-in;
 }
 
 .catalog-item-content.active {
-  width: 304px;
-  height: 51px;
   background: rgba(51, 51, 51, .1);
   border-radius: 8px;
   transition: all 0.2s ease-in;
 }
-.catalog-info.active{
-  margin-top: 15px;
-  transition: all 0.1s ease-in;
-}
 
-.catalog-item-content:hover .catalog-item-time {
-  font-family: PingFangSC-Medium, PingFang SC;
+.catalog-item-content:hover .catalog-info-time {
   font-weight: 500;
   color: rgba(51, 51, 51, 1);
   transition: all 0.1s ease-in;
 }
-
+.catalog-info-time.active{
+  font-weight: 500;
+  color: rgba(51, 51, 51, 1);
+  transition: all 0.1s ease-in;
+}
 .catalog-info {
   font-size: 14px;
   font-family: PingFangSC-Regular, PingFang SC;
   font-weight: 400;
   color: rgba(51, 51, 51, 1);
   line-height: 20px;
-  margin: 11.5px 0px 11.5px 11px;
 }
 
 .catalog-info-time {
